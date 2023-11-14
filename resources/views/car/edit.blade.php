@@ -1,0 +1,76 @@
+@extends('base.layaud')
+@section('content')
+  <div class="col-md-12 grid-margin stretch-card" >
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Default form</h4>
+                    <p class="card-description"> Basic form layout </p>
+                    <form class="forms-sample" method="post" action="{{url('/car/' .$car->id)}}">
+                        
+
+                      @csrf
+                     @method('put') 
+                      <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" name="marca"  value="{{old('marca',$car->marca)}}"  class="form-control" id="marca" placeholder="Marca">
+                      </div>
+                      <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" name="modelo" value="{{old('modelo',$car->modelo)}}" class="form-control" id="modelo" placeholder="Modelo">
+                      </div>
+                      <div class="form-group">
+                        <label for="version">Version</label>
+                        <input type="text"  name="version" value="{{old('version',$car->version)}}" class="form-control" id="version" placeholder="Version">
+                      </div>
+                      <div class="form-group">
+                        <label for="km">Kilometros</label>
+                        <input type="text"  value="{{old('km',$car->km)}}"  name="km" class="form-control" id="km" placeholder="Kilometros">
+                      </div>
+                       <div class="form-group">
+                        <label for="precio">Precio</label>
+                        <input type="text" value="{{old('precio',$car->precio)}}"  name="precio"  class="form-control" id="precio" placeholder="Precio">
+                      </div>
+                       <div class="form-group">
+                        <label for="año">Año</label>
+                        <input type="text"  name="año" value="{{old('año',$car->año)}}" class="form-control" id="año" placeholder="Año">
+                      </div>
+                      <div class="form-group">
+                        <label for="trasmision">Trasmision</label>
+                        <input type="text"  name="trasmision" value="{{old('trasmision',$car->trasmision)}}" class="form-control" id="trasmision" placeholder="Trasmision">
+                      </div>
+                      <div class="form-group">
+                        <label for="combustible">Combustible</label>
+                        <input type="text" name="combustible" value="{{old('combustible',$car->combustible)}}" class="form-control" id="combustible" placeholder="Combustible">
+                      </div>
+                      <div class="form-group">
+                        <label for="cv">Potencia</label>
+                        <input type="text" name="cv" value="{{old('cv',$car->cv)}}" class="form-control" id="cv" placeholder="Potencia">
+                      </div>
+                       <div class="form-group">
+                        <label for="pais">Pais</label>
+                        <input type="text"  name="pais" value="{{old('pais',$car->pais)}}" class="form-control" id="pais" placeholder="Pais">
+                      </div>
+                       <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text"  name="estado" value="{{old('estado',$car->estado)}}" class="form-control" id="estado" placeholder="Estado">
+                      </div>
+                      <div class="form-group">
+                        <label for="carrociria">Carrociria</label>
+                        <input type="text"  name="carroceria" value="{{old('carroceria',$car->carroceria)}}" class="form-control" id="carrociria" placeholder="Carrociria">
+                      </div>
+                      <div class="form-group">
+                        <label for="categoriaEmisiones">Categoria Emisiones</label>
+                        <input type="text"  name="categoriaEmisiones" value="{{old('categoriaEmisiones',$car->categoriaEmisiones)}}" class="form-control" id="categoriaEmisiones" placeholder="Categoria Emisiones">
+                      </div>
+                      <div class="form-group">
+                        <label for="puertas">Numero de puertas</label>
+                        <input type="text"  name="puertas"  value="{{old('puertas',$car->puertas)}}" class="form-control" id="puertas" placeholder="Numero de puertas">
+                      </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                      <button class="btn btn-dark">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+@endsection
