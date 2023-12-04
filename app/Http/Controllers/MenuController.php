@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\FavoriteCar;
 class MenuController extends Controller
 {
     public function index(){
@@ -14,6 +14,7 @@ class MenuController extends Controller
         return redirect(url('car'));
     }
     public function showFavorite(){
+       
         return  view('myFavorite');
         
     }

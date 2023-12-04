@@ -110,6 +110,17 @@
                       </div>
                     </div>
                   </div>
+                  <div>
+                    
+                      <a href="{{url('car/' . $car->id . '/edit')}}" class="btn btn-outline-info btn-fw">Editar</a>
+                      <form class="formDelete d-inline-block" action="{{ url('car/' . $car->id) }}" method="post">
+                      @csrf
+                      @method('delete')
+                      <button type="submit" class="btn btn-outline-info btn-fw">Eliminar</button>
+                    </form>
+                   
+                    
+                  </div>
                 </div>
               </div>
             </div>

@@ -3,8 +3,8 @@
   <div class="col-md-12 grid-margin stretch-card" >
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Default form</h4>
-                    <p class="card-description"> Basic form layout </p>
+                    <div class="text-right"><a href="{{url('car')}}" class="align-self-end">
+                  <i class="fa fa-times align-self-end" aria-hidden="true"></i></a></div>
                     <form class="forms-sample" method="post" action="{{url('/car')}}">
 
                       @csrf

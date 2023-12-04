@@ -234,6 +234,7 @@
                     </button>
                 </div>
             </nav>
+            
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
